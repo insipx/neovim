@@ -5,7 +5,7 @@
     onPush.default.outputs = withSystem "x86_64-linux" (
       { self', ... }:
       {
-        inherit (self'.packages) nixvim;
+        inherit (self'.packages) shadow-nvim;
       }
     );
   };
