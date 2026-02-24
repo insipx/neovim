@@ -1,8 +1,8 @@
-{ withSystem, pkgs, ... }:
+{ withSystem, ... }:
 {
 
   flake.herculesCI = _: {
-    onPush.default.outputs = withSystem pkgs.stdenv.hostPlatform.system (
+    onPush.default.outputs = withSystem "x86_64-linux" (
       { self', ... }:
       {
         inherit (self'.packages) nixvim;
