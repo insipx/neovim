@@ -13,11 +13,20 @@ _: {
       }
       {
         mode = "n";
-        key = "<leader>cD";
+        key = "<leader>cx";
         action = "<cmd>Lspsaga show_workspace_diagnostics ++normal<CR>";
         options = {
           silent = true;
           desc = "show workspace diagnostics";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>cD";
+        action = "<cmd>Lspsaga show_buf_diagnostics ++normal<CR>";
+        options = {
+          silent = true;
+          desc = "show buffer diagnostics";
         };
       }
       {

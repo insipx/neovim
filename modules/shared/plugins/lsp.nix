@@ -17,15 +17,17 @@ _: {
             enable = true;
             filetypes = [ "toml" ];
           };
+          just = {
+            enable = true;
+          };
         };
       };
       lsp-format.enable = true;
       fidget = {
         enable = true;
         settings.notification.override_vim_notify = true;
-
       };
-      tiny-inline-diagnostic.enable = false;
+      tiny-inline-diagnostic.enable = true;
       lspsaga.enable = true;
 
     };

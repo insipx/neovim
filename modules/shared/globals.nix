@@ -5,7 +5,7 @@ _: {
     diagnostic.settings = {
       severity_sort = true;
       virtual_lines.only_current_line = false;
-      virtual_text = true;
+      virtual_text = false;
     };
 
     globals = {
@@ -24,9 +24,6 @@ _: {
       loaded_remote_plugins = false;
     };
     opts = {
-      neovide_refresh_rate = "120";
-      neovide_progress_bar_enabled = true;
-      neovide_progress_bar_height = 4;
       relativenumber = true;
       number = true;
       hidden = true;

@@ -71,12 +71,12 @@
                   buildScripts.enable = true;
                   features = "all";
                 };
-                excludeGlobs = [ "**/bindings/wasm/**" ];
+                files.exclude = [ "bindings/wasm" ];
                 checkOnSave = true;
-                check = {
-                  command = "clippy";
-                  features = "all";
-                };
+                #  check = {
+                #    command = "clippy";
+                #    features = "all";
+                #  };
                 procMacro = {
                   enable = true;
                   attributes.enable = true;
@@ -265,13 +265,15 @@
             start_in_insert = true;
           };
           luaConfig.post = ''
+            shade_terminals = false
             local Terminal = require('toggleterm.terminal').Terminal
             local float_general = Terminal:new({
               hidden = true,
               name = "general",
               auto_scroll = true,
               direction = "float",
-              dir = git_dir
+              dir = git_dir,
+              shade_terminals = false,
             })
             local htop = Terminal:new({
               cmd = "htop",

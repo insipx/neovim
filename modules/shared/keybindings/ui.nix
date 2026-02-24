@@ -9,6 +9,13 @@ _: {
         '';
         options.desc = "toggle mini map";
       }
+      {
+        mode = "n";
+        key = "<Leader>ud";
+        action = "TinyInlineDiag toggle<CR>";
+        options.desc = "toggle mini map";
+      }
+
     ];
   };
 }

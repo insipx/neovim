@@ -1,11 +1,7 @@
 _: {
   flake.modules = {
     vim.editor = {
-      extraConfigLua = ''
-        -- vim.opt.listchars:append "eol:↴"
-        vim.opt.listchars:append "space:⋅"
-      ''
-      + builtins.readFile ./lua/conform.lua;
+      extraConfigLua = builtins.readFile ./lua/extraconfig.lua + builtins.readFile ./lua/conform.lua;
 
     };
     extraConfigVim = ''
