@@ -36,9 +36,7 @@
           # Apply neorg-overlay to get the packages it provides
           neorgPkgs = inputs.neorg-overlay.overlays.default pkgs pkgs;
         in
-        neorgPkgs // {
-          # Add any additional custom packages here
-        };
+        neorgPkgs // { };
 
       packages = lib.flip lib.mapAttrs config.configurations.vim (
         name:

@@ -71,6 +71,7 @@
                   buildScripts.enable = true;
                   features = "all";
                 };
+                excludeGlobs = [ "**/bindings/wasm/**" ];
                 checkOnSave = true;
                 check = {
                   command = "clippy";

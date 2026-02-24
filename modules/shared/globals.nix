@@ -5,7 +5,7 @@ _: {
     diagnostic.settings = {
       severity_sort = true;
       virtual_lines.only_current_line = false;
-      virtual_text = false;
+      virtual_text = true;
     };
 
     globals = {
