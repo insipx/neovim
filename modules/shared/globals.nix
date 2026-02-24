@@ -24,6 +24,9 @@ _: {
       loaded_remote_plugins = false;
     };
     opts = {
+      neovide_refresh_rate = "120";
+      neovide_progress_bar_enabled = true;
+      neovide_progress_bar_height = 4;
       relativenumber = true;
       number = true;
       hidden = true;
