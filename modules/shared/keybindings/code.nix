@@ -67,6 +67,15 @@ _: {
           desc = "select code action";
         };
       }
+      {
+        mode = "n";
+        key = "<leader>cc";
+        action = "<cmd>RustLsp flyCheck run<CR>";
+        options = {
+          silent = true;
+          desc = "run flycheck (clippy)";
+        };
+      }
     ];
   };
 }

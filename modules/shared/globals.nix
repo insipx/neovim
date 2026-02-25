@@ -4,7 +4,7 @@ _: {
     withRuby = true;
     diagnostic.settings = {
       severity_sort = true;
-      virtual_lines.only_current_line = false;
+      virtual_lines = false;
       virtual_text = false;
     };
 
