@@ -295,10 +295,21 @@
         scope.enable = true;
         project-nvim = {
           enable = true;
+          enableTelescope = true;
           settings = {
             scope_chdir = "tab";
             lsp.enabled = false;
             exclude_dirs = [ "~/.cargo/*" ];
+            patterns = [
+              ".git"
+              "_darcs"
+              ".hg"
+              ".bzr"
+              ".svn"
+              "Makefile"
+              "package.json"
+              ".vscode"
+            ];
           };
         };
       };
