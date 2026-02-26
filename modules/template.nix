@@ -6,11 +6,10 @@
 }:
 let
   inherit (lib) mkEnableOption mkIf mkOption;
-  # Bind flake-parts config here so NixOS module's `config` doesn't shadow it
   flakeConfig = config;
 in
 {
-  config.flake.modules.nixos.shadow-nvim =
+  config.flake.lib.template =
     {
       pkgs,
       config,
@@ -49,7 +48,7 @@ in
         in
         {
           environment.systemPackages = mkIf cfg.enable [ shadow-nvim ];
+          environment.variables.EDITOR = "${shadow-nvim}/bin/nvim";
         };
     };
-  config.flake.nixosModules.default = config.flake.modules.nixos.shadow-nvim;
 }
