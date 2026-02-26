@@ -268,7 +268,6 @@
               ".hg"
               ".bzr"
               ".svn"
-              "package.json"
               ".vscode"
             ];
           };
