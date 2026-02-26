@@ -263,11 +263,11 @@
             exclude_dirs = [ "~/.cargo/*" ];
             patterns = [
               ".git"
+              ".jj"
               "_darcs"
               ".hg"
               ".bzr"
               ".svn"
-              "Makefile"
               "package.json"
               ".vscode"
             ];
