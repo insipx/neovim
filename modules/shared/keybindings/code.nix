@@ -13,6 +13,16 @@ _: {
       }
       {
         mode = "n";
+        key = "<leader>ci";
+        action.__raw = ''
+          function()
+            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+          end
+        '';
+        options.desc = "toggle inlay hints";
+      }
+      {
+        mode = "n";
         key = "<leader>cx";
         action = "<cmd>Lspsaga show_workspace_diagnostics ++normal<CR>";
         options = {

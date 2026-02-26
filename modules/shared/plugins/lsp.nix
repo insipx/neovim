@@ -29,7 +29,6 @@ _: {
       };
       tiny-inline-diagnostic.enable = true;
       lspsaga.enable = true;
-
     };
   };
 }
