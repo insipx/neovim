@@ -66,7 +66,7 @@
           };
         };
 
-        direnv.enable = true;
+        direnv.enable = false;
 
         vim-matchup = {
           enable = true;
