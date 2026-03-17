@@ -35,7 +35,9 @@
         viu # for FFF Picker
       ];
 
-      extraPlugins = [ ];
+      extraPlugins = [
+        pkgs.vimPlugins.claudecode-nvim
+      ];
 
       extraPython3Packages =
         ps: with ps; [

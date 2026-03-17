@@ -6,3 +6,5 @@ if vim.g.neovide then
 	vim.g.neovide_progress_bar_enabled = true
 	vim.g.neovide_progress_bar_height = 4
 end
+
+require("claudecode").setup({})
