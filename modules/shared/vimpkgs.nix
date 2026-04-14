@@ -15,9 +15,9 @@
         taplo
         stylua
         deno
-        nodePackages.prettier
         nixfmt
         rubyPackages.htmlbeautifier
+        prettier
 
         # Linters
         dotenv-linter
