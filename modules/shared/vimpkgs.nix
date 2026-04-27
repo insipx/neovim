@@ -28,6 +28,7 @@
         markdownlint-cli
         shellcheck
         golangci-lint
+        eslint_d
 
         # Other
         htop
