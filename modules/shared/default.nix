@@ -102,7 +102,10 @@
           enable = true;
           settings.load = {
             "core.defaults".__empty = null;
-            "core.concealer".config.icon_preset = "diamond";
+            "core.concealer" = {
+              config.folds = "false";
+              icon_preset = "diamond";
+            };
             "core.dirman".config.workspaces = {
               work = "~/.notes/work";
               home = "~/.notes/home";
