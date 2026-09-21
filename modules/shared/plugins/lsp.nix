@@ -26,15 +26,17 @@ _: {
           enable = true;
           activate = true;
         };
-        harper_ls = {
+        ltex = {
           enable = true;
+          activate = true;
+          config.filetypes = [ "md" ];
         };
       };
     };
     plugins = {
       lsp.enable = true;
-      lsp.servers.harper_ls.enable = true;
       lsp-format.enable = true;
+      ltex-extra.enable = true;
       fidget = {
         enable = true;
         settings.notification.override_vim_notify = true;

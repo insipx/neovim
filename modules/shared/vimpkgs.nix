@@ -37,6 +37,9 @@
         htop
         vscode-extensions.vadimcn.vscode-lldb
         viu # for FFF Picker
+
+        languagetool
+        ltex-ls-plus
       ];
 
       extraPlugins = [
