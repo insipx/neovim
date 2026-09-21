@@ -4,6 +4,9 @@
     { pkgs, ... }:
     {
       extraPackages = with pkgs; [
+        # lsp
+        clojure-lsp
+
         gcc
         ripgrep
         lua51Packages.luarocks

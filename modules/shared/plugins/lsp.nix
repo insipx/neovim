@@ -1,27 +1,39 @@
 _: {
   flake.modules.vim.editor = args: {
-    plugins = {
-      lsp = {
-        enable = true;
-        servers = {
-          nixd = {
-            enable = true;
-            filetypes = [ "nix" ];
-            settings.formatting.command = [ "nixfmt" ];
-          };
-          gopls = {
-            enable = true;
-            filetypes = [ "go" ];
-          };
-          taplo = {
-            enable = true;
-            filetypes = [ "toml" ];
-          };
-          just = {
-            enable = true;
-          };
+    lsp = {
+      servers = {
+        nixd = {
+          enable = true;
+          activate = true;
+          config.filetypes = [ "nix" ];
+          config.formatting.command = [ "nixfmt" ];
+        };
+        gopls = {
+          enable = true;
+          config.filetypes = [ "go" ];
+          activate = true;
+        };
+        taplo = {
+          enable = true;
+          activate = true;
+          config.filetypes = [ "toml" ];
+        };
+        just = {
+          enable = true;
+          activate = true;
+        };
+        clojure_lsp = {
+          enable = true;
+          activate = true;
+        };
+        harper_ls = {
+          enable = true;
         };
       };
+    };
+    plugins = {
+      lsp.enable = true;
+      lsp.servers.harper_ls.enable = true;
       lsp-format.enable = true;
       fidget = {
         enable = true;

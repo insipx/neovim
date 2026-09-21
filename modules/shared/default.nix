@@ -211,8 +211,6 @@
             end
           '';
         };
-
-        scope.enable = true;
         project-nvim = {
           enable = true;
           enableTelescope = true;
