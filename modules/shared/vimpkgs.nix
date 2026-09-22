@@ -40,6 +40,7 @@
 
         languagetool
         ltex-ls-plus
+        shfmt
       ];
 
       extraPlugins = [

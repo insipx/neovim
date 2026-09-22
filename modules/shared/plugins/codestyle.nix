@@ -16,8 +16,10 @@ _: {
             nix = [ "nixfmt" ];
             yaml = [ "prettier" ];
             html = [ "htmlbeautifier" ];
+            bash = [ "shfmt" ];
             markdown = [
               "deno_fmt"
+              "injected"
             ];
             json = [
               "deno_fmt"
