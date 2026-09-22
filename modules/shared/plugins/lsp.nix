@@ -1,5 +1,5 @@
 _: {
-  flake.modules.vim.editor = args: {
+  flake.modules.vim.editor = { pkgs, ... }: {
     lsp = {
       servers = {
         nixd = {
@@ -26,17 +26,26 @@ _: {
           enable = true;
           activate = true;
         };
-        ltex = {
-          enable = true;
-          activate = true;
-          config.filetypes = [ "md" ];
-        };
+        # ltex = {
+        #   enable = true;
+        #   activate = true;
+        #   config.filetypes = [ "md" ];
+        #   package = pkgs.ltex-ls-plus;
+        # };
       };
     };
     plugins = {
       lsp.enable = true;
       lsp-format.enable = true;
-      ltex-extra.enable = true;
+      lsp.servers.ltex_plus = {
+        enable = true;
+        package = pkgs.ltex-ls-plus;
+        settings = {
+          ltex = {
+            language = "en-US";
+          };
+        };
+      };
       fidget = {
         enable = true;
         settings.notification.override_vim_notify = true;
