@@ -43,6 +43,11 @@ _: {
         settings = {
           ltex = {
             language = "en-US";
+            languageToolHttpServerUri = "https://api.languagetoolplus.com";
+            languageToolOrg = {
+              username = "andrew.plaza15@gmail.com";
+              apiKey.__raw = ''require("shadow.secrets").read("~/.config/neovim-secrets/languagetool")'';
+            };
           };
         };
       };
