@@ -138,6 +138,7 @@
               "protobuf"
               "nix"
               "toml"
+              "capnp"
             ];
           };
         };
