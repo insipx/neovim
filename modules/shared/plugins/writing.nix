@@ -8,6 +8,9 @@ _: {
       twilight = {
         enable = true;
       };
+      diagram = {
+        enable = true;
+      };
     };
   };
 }
