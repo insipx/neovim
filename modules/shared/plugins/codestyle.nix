@@ -13,6 +13,7 @@ _: {
             end
           '';
           formatters_by_ft = {
+            rust = [ "rustfmt" ];
             toml = [ "taplo" ];
             lua = [ "stylua" ];
             javascript = [ "prettier" ];

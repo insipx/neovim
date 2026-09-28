@@ -1,5 +1,8 @@
 _: {
   flake.modules.vim.editor = _: {
+    # The bundled rust.vim otherwise defaults to obsolete --write-mode flags.
+    globals.rustfmt_emit_files = 1;
+
     plugins.rustaceanvim = {
       enable = true;
       settings.server = {
