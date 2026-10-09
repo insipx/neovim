@@ -61,6 +61,25 @@ _: {
       }
       {
         mode = "n";
+        key = "<leader>cF";
+        action.__raw = ''
+          function()
+            local disabled = vim.g.disable_autoformat or vim.b.disable_autoformat
+            if disabled then
+              vim.cmd("FormatEnable")
+            else
+              vim.cmd("FormatDisable")
+            end
+            vim.notify("Autoformat " .. (disabled and "enabled" or "disabled"))
+          end
+        '';
+        options = {
+          silent = true;
+          desc = "toggle autoformat globally";
+        };
+      }
+      {
+        mode = "n";
         key = "<leader>co";
         action = "<cmd>Lspsaga outline<CR>";
         options = {

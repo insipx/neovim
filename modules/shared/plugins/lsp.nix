@@ -36,7 +36,8 @@ _: {
     };
     plugins = {
       lsp.enable = true;
-      lsp-format.enable = true;
+      # Conform owns format-on-save, including LSP fallback.
+      lsp-format.enable = false;
       lsp.servers.ltex_plus = {
         enable = true;
         package = pkgs.ltex-ls-plus;
